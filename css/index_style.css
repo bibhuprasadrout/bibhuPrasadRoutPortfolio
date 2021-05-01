@@ -1,0 +1,130 @@
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+ul{
+  list-style: none;
+}
+
+/* body */
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* navbar inside header */
+
+#navbar{
+  display: flex;
+  justify-content: space-around;
+  background-color: #1d4ed8;
+  color: #fff;
+}
+
+#navbar h1{
+  padding: 1em;
+}
+
+#navbar ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#navbar ul li{
+  padding: 1em;
+}
+
+/* main section */
+#main-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* showcase */
+
+#showcase {
+  padding: 3em;
+}
+#showcase h2{
+  font-size: 3em;
+  text-align: center;
+  color: #1d4ed8;
+  padding: 1em;
+}
+#showcase div{
+  padding: 3em;
+  background-color: #60A5FA;
+  border-radius: 1em;
+}
+#showcase div img{
+  width: 50vw;
+  padding: 1em;
+}
+
+/* technologies */
+
+#technologies{
+  padding: 1em;
+}
+#technologies h2{
+  text-align: center;
+  color: #1d4ed8;
+}
+#technologies p{
+  margin: 1em;
+  font-size: 2.1em;
+  color: #333;
+}
+#skills ul{
+  display: flex;
+  justify-content: space-evenly;
+  color: #60A5FA;
+}
+
+/* projects */
+
+#projects{
+  padding: 1em;
+}
+#projects h2{
+  text-align: center;
+  color: #1d4ed8;
+}
+
+/* blogs */
+
+#blogs{
+  padding: 1em;
+}
+#blogs h2{
+  text-align: center;
+  color: #1d4ed8;
+}
+
+#blogs p{
+  color: #999;
+  font-size: 2.1em;
+}
+
+/* miscellaneous */
+
+#miscellaneous{
+  padding: 1em;
+}
+#miscellaneous h2{
+  text-align: center;
+  color: #1d4ed8;
+}
+#miscellaneous p{
+  color: #999;
+  font-size: 2.1em;
+}

@@ -24,7 +24,7 @@ body{
 #navbar{
   display: flex;
   justify-content: space-around;
-  background-color: #1d4ed8;
+  background-color: #1D4ED8;
   color: #fff;
 }
 
@@ -33,13 +33,19 @@ body{
 }
 
 #navbar ul{
-  list-style: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 21vw;
 }
 #navbar ul li{
   padding: 1em;
+}
+#navbar ul li:hover{
+  background-color: #1E40AF;
+}
+#navbar ul li.current{
+  background-color: #1E40AF;
 }
 
 /* main section */
@@ -52,36 +58,35 @@ body{
 /* showcase */
 
 #showcase {
-  padding: 3em;
+  padding: 0 0 3em 0;
 }
 #showcase h2{
   font-size: 3em;
   text-align: center;
   color: #1d4ed8;
-  padding: 1em;
+  padding: .5em 0 .5em 0;
 }
 #showcase div{
-  padding: 3em;
+  padding: 1em;
   background-color: #60A5FA;
   border-radius: 1em;
 }
 #showcase div img{
   width: 50vw;
-  padding: 1em;
 }
 
 /* technologies */
 
 #technologies{
-  padding: 1em;
+  padding: 0 0 1em 0;
 }
 #technologies h2{
   text-align: center;
   color: #1d4ed8;
 }
 #technologies p{
-  margin: 1em;
-  font-size: 2.1em;
+  margin: .5em;
+  font-size: 1.7em;
   color: #333;
 }
 #skills ul{
@@ -93,17 +98,30 @@ body{
 /* projects */
 
 #projects{
-  padding: 1em;
+  padding: 1em 0 1em 0;
 }
 #projects h2{
   text-align: center;
   color: #1d4ed8;
 }
+#project-div{
+  margin: 1em;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.project{
+  margin: 1em;
+}
+
+.project a{
+  color: #B45309;
+}
 
 /* blogs */
 
 #blogs{
-  padding: 1em;
+  padding: 1em 0 1em 0;
 }
 #blogs h2{
   text-align: center;
@@ -118,7 +136,7 @@ body{
 /* miscellaneous */
 
 #miscellaneous{
-  padding: 1em;
+  padding: 1em 0 1em 0;
 }
 #miscellaneous h2{
   text-align: center;

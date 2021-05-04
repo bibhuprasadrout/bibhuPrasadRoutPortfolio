@@ -29,6 +29,7 @@ body{
 }
 
 #navbar h1{
+  font-size: 1.7em;
   padding: 1em;
 }
 
@@ -39,7 +40,10 @@ body{
   width: 21vw;
 }
 #navbar ul li{
-  padding: 1em;
+  flex: 1;
+  font-size: 1.3em;
+  padding: 1.5em;
+  text-align: center;
 }
 #navbar ul li:hover{
   background-color: #1E40AF;
@@ -86,7 +90,7 @@ body{
 }
 #technologies p{
   margin: .5em;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #333;
 }
 #skills ul{
@@ -129,8 +133,13 @@ body{
 }
 
 #blogs p{
-  color: #999;
-  font-size: 2.1em;
+  margin: 1em;
+  font-size: 1.1em;
+  color: #333;
+}
+
+#blogs p a{
+  color: #B45309;
 }
 
 /* miscellaneous */
@@ -143,6 +152,11 @@ body{
   color: #1d4ed8;
 }
 #miscellaneous p{
-  color: #999;
-  font-size: 2.1em;
+  margin: 1em;
+  font-size: 1.1em;
+  color: #333;
+}
+
+#miscellaneous p a{
+  color: #B45309;
 }

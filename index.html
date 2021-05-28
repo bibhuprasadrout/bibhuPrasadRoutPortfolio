@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,26 @@
   <link rel="stylesheet" href="css/index_style.css">
   <title>Bibhu Prasad Rout</title>
 </head>
+
 <body>
 
   <header>
-    <nav id="navbar" class="navbar">
-      <h1>bibhuPrasadRout</h1>
-      <ul>
-        <li class="current"><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>bibhuPrasadRout</h1>
   </header>
+  <nav id="navStop" class="navstop" onclick="showNavMenu()">
+    <strong class="navstamp">b</strong>
+  </nav>
+  <ul class="navstop-dropdown">
+    <li class="navstop-link"><a href="javascript:void(0)" class="closeElement" onclick="closeElement()">&times;</a></li>
+    <li class="navstop-link current"><a href="index.html">Home</a></li>
+    <li class="navstop-link"><a href="about.html">About</a></li>
+    <li class="navstop-link"><a href="#">Contact</a></li>
+  </ul>
 
   <section id="main-section">
 
     <article id="showcase" class="showcase">
-      <h2>Web Dev</h2>
+      <h2>Web App Dev</h2>
       <div id="image-box">
         <img src="media/showcase.svg" alt="webDeveloper">
       </div>
@@ -50,19 +54,48 @@
       <h2>@projects</h2>
       <div id="project-div">
         <p id="addFiveNumbers" class="project">
-          addFiveNumbers is a simple app to add five numbers.
-          <br>The link to the site: <a href="https://add-five-numbers.netlify.app/" target="_blank">addFiveNumbers.com</a>
-          <br>The code can be found at my github repositories: <a href="https://github.com/bibhuprasadrout/addFiveNumbers" target="_blank">bibhuprasadrout/addFiveNumbers</a> 
+          A simple app to add five numbers.
+          <br>The link to the site: <a href="https://add-five-numbers.netlify.app/" target="_blank"
+            class="siteName">addFiveNumbers.com</a>
+          <br>The code can be found at my github repositories: <a
+            href="https://github.com/bibhuprasadrout/addFiveNumbers" target="_blank">bibhuprasadrout/addFiveNumbers</a>
         </p>
         <p id="form-validator" class="project">
           A simple registration form that also checks for valid input.
-          <br>The link to the site: <a href="https://reg-form-validation.netlify.app/" target="_blank">Registration</a>
-          <br>The code can be found at my github repositories: <a href="https://github.com/bibhuprasadrout/formValidator" target="_blank">bibhuprasadrout/formValidator</a> 
+          <br>The link to the site: <a href="https://reg-form-validation.netlify.app/" target="_blank"
+            class="siteName">Registration</a>
+          <br>The code can be found at my github repositories: <a
+            href="https://github.com/bibhuprasadrout/formValidator" target="_blank">bibhuprasadrout/formValidator</a>
         </p>
         <p id="bananaTranslator" class="project">
           A simple app that translates user-input to banana language.
-          <br>The link to the site: <a href="https://model-banana-translator.netlify.app/" target="_blank">baNana.com</a>
-          <br>The code can be found at my github repositories: <a href="https://github.com/bibhuprasadrout/bananaTranslator" target="_blank">bibhuprasadrout/bananaTranslator</a> 
+          <br>The link to the site: <a href="https://model-banana-translator.netlify.app/" target="_blank"
+            class="siteName">baNana.com</a>
+          <br>The code can be found at my github repositories: <a
+            href="https://github.com/bibhuprasadrout/bananaTranslator"
+            target="_blank">bibhuprasadrout/bananaTranslator</a>
+        </p>
+        <p id="emojiInterpreter" class="project">
+          A simple app that hepls the user understand the meaning of emojies.
+          <br>The link to the site: <a href="https://bibhuprasadrout.github.io/emojiInterpreter/" target="_blank"
+            class="siteName">emojiInterpreter</a>
+          <br>The code can be found at my github repositories: <a
+            href="https://github.com/bibhuprasadrout/emojiInterpreter"
+            target="_blank">bibhuprasadrout/emojiInterpreter</a>
+        </p>
+        <p id="goodMovies" class="project">
+          A react app that hepls the user find movies by genre.
+          <br>The link to the site: <a href="https://bibhuprasadrout.github.io/goodMovies/" target="_blank"
+            class="siteName">goodMovies</a>
+          <br>The code can be found at my github repositories: <a href="https://github.com/bibhuprasadrout/goodMovies"
+            target="_blank">bibhuprasadrout/goodMovies</a>
+        </p>
+        <p id="emojiInterpreter" class="project">
+          A simple app that hepls the user understand the meaning of emojies.
+          <br>The link to the site: <a href="https://bibhuprasadrout.github.io/suggestMyMovie/" target="_blank"
+            class="siteName">suggestMyMovies</a>
+          <br>The code can be found at my github repositories: <a
+            href="https://github.com/bibhuprasadrout/suggestMyMovie" target="_blank">bibhuprasadrout/suggestMyMovie</a>
         </p>
       </div>
     </article>
@@ -73,7 +106,8 @@
       <h2>@blogs</h2>
       <p id="bootReactAppBlog" class="blog">
         The post provides information to React beginners about booting a React application.
-        <br>The link to the blog: <a href="https://khoka07.hashnode.dev/booting-a-react-application" target="_blank">bibhuPrasadRout's Blog</a> 
+        <br>The link to the blog: <a href="https://khoka07.hashnode.dev/booting-a-react-application"
+          target="_blank">bibhuPrasadRout's Blog</a>
       </p>
     </article>
 
@@ -83,7 +117,8 @@
       <h2>@miscellaneous</h2>
       <p id="creativeFlair" class="miscellaneous">
         Illustration Work.
-        <br>The link to the blog: <a href="https://www.behance.net/bibhuprasadrout" target="_blank">bibhuPrasadRout's behance</a> 
+        <br>The link to the blog: <a href="https://www.behance.net/bibhuprasadrout" target="_blank">bibhuPrasadRout's
+          behance</a>
       </p>
     </article>
 
@@ -91,4 +126,5 @@
   <footer></footer>
   <script src="js/index_script.js"></script>
 </body>
+
 </html>

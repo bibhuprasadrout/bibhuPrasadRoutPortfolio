@@ -15,6 +15,23 @@ ul {
 
 body {
   font-family: Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 100px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  width: 100%;
+  min-height: 50vh;
+  background: #3182ce;
+}
+
+article:nth-child(2n) {
+  background-color: #fff;
 }
 
 /* header */
@@ -22,12 +39,16 @@ body {
 header {
   display: flex;
   justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
 }
 
 header h1 {
   font-size: 3.7rem;
   color: #3182ce;
-  padding: .27em .37em;
+  padding: 17px;
 }
 
 /* navstop */
@@ -47,7 +68,7 @@ header h1 {
   background-color: #2a4365;
 }
 
-.navstop .navstamp {
+.navstamp {
   position: absolute;
   top: 7%;
   left: 31%;
@@ -60,95 +81,85 @@ header h1 {
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 97px;
+  top: 105px;
   right: 0;
-  background-color: #3182ce;
+  background-color: transparent;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 1vh;
-  border-top-left-radius: 7px;
 }
 
-.navstop-dropdown .navstop-link {
+.navstop-link {
   padding: 1rem;
   text-decoration: none;
   transition: 0.3s;
 
 }
 
-.navstop-dropdown .navstop-link.current {
+.navstop-link.current {
   background-color: #2a4365;
 }
 
-.navstop-dropdown .navstop-link a {
+.navstop-link a {
   font-size: 1.1rem;
   color: #fff;
 }
 
-.navstop-dropdown .navstop-link a:hover {
+.navstop-link a:hover {
   font-size: 1.17rem;
-}
-
-/* main section */
-#main-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* showcase */
 
 #showcase {
-  padding: 0 0 3em 0;
+  background-color: #3182ce;
 }
-#showcase h2{
-  font-size: 3em;
-  text-align: center;
-  color: #1d4ed8;
-  padding: .5em 0 .5em 0;
+
+/* personality */
+
+.personality {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
 }
-#showcase div{
+
+/* technologies, blogs, miscellaneous*/
+
+.technologies, .blogs, .miscellaneous {
   padding: 1em;
-  background-color: #60A5FA;
-  border-radius: 1em;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  flex-flow: column;
+  align-items: flex-start;
 }
-#showcase div img{
-  width: 50vw;
-}
-
-/* technologies */
-
-#technologies{
-  padding: 0 0 1em 0;
-}
-#technologies h2{
-  text-align: center;
+.technologies h2, .blogs h2, .miscellaneous h2 {
   color: #1d4ed8;
 }
-#technologies p{
-  margin: .5em;
-  font-size: 1.5em;
+.technologies p, .blog, .miscellaneous-info {
+  font-size: 1rem;
   color: #333;
 }
-#skills ul{
+.skills-table {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: column;
+  align-items: flex-start;
   color: #60A5FA;
+}
+.blogs p a, .miscellaneous-info a {
+  color: #B45309;
 }
 
 /* projects */
 
 #projects{
-  padding: 1em 0 1em 0;
+  padding: 1em;
 }
 #projects h2{
   text-align: center;
-  color: #1d4ed8;
 }
 #project-div{
   margin: 1em;
   font-size: 1.1em;
-  color: #333;
 }
 
 .project{
@@ -164,41 +175,9 @@ header h1 {
   font-weight: 700;
 }
 
-/* blogs */
-
-#blogs{
-  padding: 1em 0 1em 0;
-}
-#blogs h2{
-  text-align: center;
-  color: #1d4ed8;
-}
-
-#blogs p{
-  margin: 1em;
-  font-size: 1.1em;
-  color: #333;
-}
-
-#blogs p a{
-  color: #B45309;
-}
-
-/* miscellaneous */
-
-#miscellaneous{
-  padding: 1em 0 1em 0;
-}
-#miscellaneous h2{
-  text-align: center;
-  color: #1d4ed8;
-}
-#miscellaneous p{
-  margin: 1em;
-  font-size: 1.1em;
-  color: #333;
-}
-
-#miscellaneous p a{
-  color: #B45309;
+footer {
+  width: 100%;
+  height: 25vh;
+  background-color: #fff;
+  color: #999;
 }

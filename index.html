@@ -18,39 +18,58 @@
     <strong class="navstamp">b</strong>
   </nav>
   <ul class="navstop-dropdown">
-    <li class="navstop-link"><a href="javascript:void(0)" class="closeElement" onclick="closeElement()">&times;</a></li>
     <li class="navstop-link current"><a href="index.html">Home</a></li>
     <li class="navstop-link"><a href="about.html">About</a></li>
     <li class="navstop-link"><a href="#">Contact</a></li>
   </ul>
 
-  <section id="main-section">
+  <section>
 
-    <article id="showcase" class="showcase">
-      <h2>Web App Dev</h2>
-      <div id="image-box">
-        <img src="media/showcase.svg" alt="webDeveloper">
-      </div>
+    <article id="top-home-showcase" class="showcase" onload="articleProperties()">
     </article>
 
-    <article id="technologies" class="technologies">
-      <h2>@technologies</h2>
-      <p>I am familiar with the following technologies.</p>
-      <div id="skills">
-        <ul>
-          <li>HTML5</li>
-          <li>CSS</li>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>Abobe Illustrator</li>
-          <li>Adobe Photoshop</li>
-        </ul>
+    <article id="personality-dimension-icons" class="personality" onload="articleProperties()">
+      <div id="technologies" class="technologies">
+        <h2>@technologies</h2>
+        <p>I am familiar with the following technologies.</p>
+        <div id="skills" class="skills">
+          <ul class="skills-table">
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>Abobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- blog links -->
+
+      <div id="blogs" class="blogs">
+        <h2>@blogs</h2>
+        <p id="bootReactAppBlog" class="blog">
+          The post provides information to React beginners about booting a React application.
+          <br>The link to the blog: <a href="https://khoka07.hashnode.dev/booting-a-react-application"
+            target="_blank">bibhuPrasadRout's Blog</a>
+        </p>
+      </div>
+
+      <!-- link to behance and other websites -->
+
+      <div id="miscellaneous" class="miscellaneous">
+        <h2>@miscellaneous</h2>
+        <p id="creativeFlair" class="miscellaneous-info">
+          Illustration Work.
+          <br>The link to the blog: <a href="https://www.behance.net/bibhuprasadrout" target="_blank">bibhuPrasadRout's
+            behance</a>
+        </p>
       </div>
     </article>
 
     <!-- links to projects in github -->
 
-    <article id="projects" class="projects">
+    <article id="projects" class="projects" onload="articleProperties()">
       <h2>@projects</h2>
       <div id="project-div">
         <p id="addFiveNumbers" class="project">
@@ -100,29 +119,8 @@
       </div>
     </article>
 
-    <!-- blog links -->
-
-    <article id="blogs" class="blogs">
-      <h2>@blogs</h2>
-      <p id="bootReactAppBlog" class="blog">
-        The post provides information to React beginners about booting a React application.
-        <br>The link to the blog: <a href="https://khoka07.hashnode.dev/booting-a-react-application"
-          target="_blank">bibhuPrasadRout's Blog</a>
-      </p>
-    </article>
-
-    <!-- link to behance and other websites -->
-
-    <article id="miscellaneous" class="miscellaneous">
-      <h2>@miscellaneous</h2>
-      <p id="creativeFlair" class="miscellaneous">
-        Illustration Work.
-        <br>The link to the blog: <a href="https://www.behance.net/bibhuprasadrout" target="_blank">bibhuPrasadRout's
-          behance</a>
-      </p>
-    </article>
-
   </section>
+
   <footer></footer>
   <script src="js/index_script.js"></script>
 </body>

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 1.3;
 }
 a {
   text-decoration: none;
@@ -14,7 +15,7 @@ ul {
 /* body */
 
 body {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: monospace;
   padding-top: 100px;
 }
 
@@ -26,12 +27,16 @@ section {
 
 article {
   width: 100%;
-  min-height: 50vh;
-  background: #3182ce;
+  height: 50vh;
+  background-color: #3182ce;
 }
 
 article:nth-child(2n) {
   background-color: #fff;
+}
+
+article:not(:nth-child(2n)) {
+  color: #fff;
 }
 
 /* header */
@@ -70,8 +75,8 @@ header h1 {
 
 .navstamp {
   position: absolute;
-  top: 7%;
-  left: 31%;
+  top: -3px;
+  left: 11px;
   color: #fff;
   font-size: 2.1rem;
 }
@@ -81,7 +86,7 @@ header h1 {
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 105px;
+  top: 111px;
   right: 0;
   background-color: transparent;
   overflow-x: hidden;
@@ -89,10 +94,9 @@ header h1 {
 }
 
 .navstop-link {
-  padding: 1rem;
+  padding: 1em;
   text-decoration: none;
   transition: 0.3s;
-
 }
 
 .navstop-link.current {
@@ -101,7 +105,7 @@ header h1 {
 
 .navstop-link a {
   font-size: 1.1rem;
-  color: #fff;
+  color: lightblue;
 }
 
 .navstop-link a:hover {
@@ -116,37 +120,98 @@ header h1 {
 
 /* personality */
 
-.personality {
+.personality-fields {
   display: flex;
-  gap: 1em;
-  align-items: flex-start;
+  padding: 1em;
+  gap: 21px;
+  align-items: stretch;
+}
+@media (max-width: 768px) {
+  .personality-fields {
+    gap: 11px;
+  }
 }
 
 /* technologies, blogs, miscellaneous*/
 
-.technologies, .blogs, .miscellaneous {
+.personality-field {
+  width: calc(33.3334% - 14px);
   padding: 1em;
-  flex: 1;
   display: flex;
-  gap: 10px;
+  gap: 21px;
   flex-flow: column;
   align-items: flex-start;
+  border: 3px solid #3182ce;
+  height: auto;
+  overflow-y: auto;
 }
-.technologies h2, .blogs h2, .miscellaneous h2 {
-  color: #1d4ed8;
+@media (max-width: 768px) {
+  .personality-field {
+    gap: 11px;
+  }
 }
-.technologies p, .blog, .miscellaneous-info {
-  font-size: 1rem;
-  color: #333;
+.personality-field h2 {
+  font-size: 2.1rem;
+  color: #3182ce;
+}
+.field-info {
+  font-size: 1.1rem;
+  background-color: skyblue;
+  color: #fff;
+  padding: .3em;
 }
 .skills-table {
+  font-size: 1.7rem;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  color: #60A5FA;
+  color: skyblue;
 }
-.blogs p a, .miscellaneous-info a {
-  color: #B45309;
+
+.blog-article {
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  gap: 11px;
+  flex-flow: column;
+  align-items: center;
+}
+
+.blog-display-pic-wrap {
+  width: 100%;
+  height: 11vh;
+  background-color: #3182ce;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#bootReactAppBlog .blog-display-pic-wrap {
+  background-image: url(../media/blog_pic_01.jpg);
+}
+#bootReactAppBlog1 .blog-display-pic-wrap {
+  background-image: url(../media/blog_pic_02.jpg);
+}
+#bootReactAppBlog2 .blog-display-pic-wrap {
+  background-image: url(../media/blog_pic_03.jpg);
+}
+#bootReactAppBlog3 .blog-display-pic-wrap {
+  background-image: url(../media/blog_pic_04.jpg);
+}
+#bootReactAppBlog4 .blog-display-pic-wrap {
+  background-image: url(../media/blog_pic_05.jpg);
+}
+
+.blog-btn {
+  height: 3em;
+  width: 7em;
+  background-color: skyblue;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* projects */

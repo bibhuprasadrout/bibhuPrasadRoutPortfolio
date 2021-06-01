@@ -11,6 +11,25 @@ a {
 ul {
   list-style: none;
 }
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 21px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: skyblue;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 7px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3182ce;
+}
 
 /* body */
 
@@ -70,7 +89,7 @@ header h1 {
 }
 
 .navstop:hover {
-  background-color: #2a4365;
+  background-color: skyblue;
 }
 
 .navstamp {
@@ -99,13 +118,18 @@ header h1 {
   transition: 0.3s;
 }
 
-.navstop-link.current {
-  background-color: #2a4365;
-}
-
 .navstop-link a {
   font-size: 1.1rem;
-  color: lightblue;
+  color: skyblue;
+}
+
+.navstop-link.current {
+  background-color: skyblue;
+  color: #fff;
+}
+
+.navstop-link.current a {
+  color: #fff;
 }
 
 .navstop-link a:hover {
@@ -141,7 +165,7 @@ header h1 {
   gap: 21px;
   flex-flow: column;
   align-items: flex-start;
-  border: 3px solid #3182ce;
+  border: 3px solid skyblue;
   height: auto;
   overflow-y: auto;
 }
@@ -176,15 +200,6 @@ header h1 {
   flex-flow: column;
   align-items: center;
 }
-
-.blog-display-pic-wrap {
-  width: 100%;
-  height: 11vh;
-  background-color: #3182ce;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 #bootReactAppBlog .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_01.jpg);
 }
@@ -200,13 +215,20 @@ header h1 {
 #bootReactAppBlog4 .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_05.jpg);
 }
+.blog-display-pic-wrap {
+  width: 100%;
+  height: 11vh;
+  background-color: #3182ce;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .blog-btn {
-  height: 3em;
-  width: 7em;
+  padding: .7em 1.1em;
   background-color: skyblue;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   border-radius: 7px;
   cursor: pointer;
   display: flex;
@@ -218,26 +240,42 @@ header h1 {
 
 #projects{
   padding: 1em;
+  display: flex;
+  gap: 21px;
+  flex-flow: column;
+  align-items: flex-start;
+  overflow-y: auto;
 }
 #projects h2{
+  font-size: 2.7rem;
+  color: #fff;
   text-align: center;
 }
-#project-div{
-  margin: 1em;
-  font-size: 1.1em;
+
+.project-wrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 21px;
+  align-items: flex-start;
 }
 
-.project{
-  margin: 1em;
+.project {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  font-size: 1.7rem;
 }
 
-.project a{
-  color: #B45309;
-}
-
-.siteName{
+.siteName-btn, .codeLink-btn {
+  padding: .3em .7em;
+  background-color: skyblue;
+  color: #fff;
   font-size: 1.1rem;
-  font-weight: 700;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {

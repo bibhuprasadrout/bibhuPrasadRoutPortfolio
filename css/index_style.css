@@ -3,17 +3,18 @@
   margin: 0;
   padding: 0;
   line-height: 1.3;
+  border-radius: 3px;
 }
 a {
   text-decoration: none;
-  color: #777;
+  color: #999;
 }
 ul {
   list-style: none;
 }
 /* scrollbar */
 ::-webkit-scrollbar {
-  width: 21px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -22,8 +23,9 @@ ul {
 
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
-  border-radius: 20px;
-  border: 7px solid transparent;
+  border-radius: 11px;
+  border: 1px solid transparent;
+  border-left: 4px solid transparent;
   background-clip: content-box;
 }
 
@@ -36,18 +38,42 @@ ul {
 body {
   font-family: monospace;
   padding-top: 100px;
+  border-radius: 0;
+  
+}
+
+body::-webkit-scrollbar {
+  width: 21px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: skyblue;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 11px;
+  border: 7px solid transparent;
+  border-left: 7px solid transparent;
+  background-clip: content-box;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #3182ce;
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0;
 }
 
 article {
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   background-color: #3182ce;
+  border-radius: 0;
 }
 
 article:nth-child(2n) {
@@ -67,6 +93,8 @@ header {
   background-color: #fff;
   position: fixed;
   top: 0;
+  border-radius: 0;
+  z-index: 1;
 }
 
 header h1 {
@@ -86,6 +114,7 @@ header h1 {
   position: fixed;
   top: 30px;
   right: 30px;
+  z-index: 2;
 }
 
 .navstop:hover {
@@ -110,12 +139,14 @@ header h1 {
   background-color: transparent;
   overflow-x: hidden;
   transition: 0.5s;
+  border-radius: 0;
 }
 
 .navstop-link {
-  padding: 1em;
+  padding: .3em .7em;
   text-decoration: none;
-  transition: 0.3s;
+  border-radius: 0;
+  transition: 0.7s;
 }
 
 .navstop-link a {
@@ -159,10 +190,9 @@ header h1 {
 /* technologies, blogs, miscellaneous*/
 
 .personality-field {
-  width: calc(33.3334% - 14px);
   padding: 1em;
   display: flex;
-  gap: 21px;
+  gap: 11px;
   flex-flow: column;
   align-items: flex-start;
   border: 3px solid skyblue;
@@ -174,31 +204,50 @@ header h1 {
     gap: 11px;
   }
 }
+#miscellaneous {
+  flex: 1;
+}
+#technologies {
+  flex: 1.5;
+}
+#blogs {
+  flex: 3;
+}
 .personality-field h2 {
-  font-size: 2.1rem;
+  font-size: 1.1rem;
   color: #3182ce;
 }
 .field-info {
-  font-size: 1.1rem;
+  font-size: .7rem;
+  border-radius: 3px;
   background-color: skyblue;
   color: #fff;
   padding: .3em;
 }
 .skills-table {
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   color: skyblue;
 }
 
+.blog-articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+}
+
 .blog-article {
-  font-size: 1rem;
-  color: #333;
+  color: #777;
   display: flex;
   gap: 11px;
   flex-flow: column;
   align-items: center;
+  position: relative;
+  width: calc(50% - 10.5px);
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  padding-bottom: 4em;
 }
 #bootReactAppBlog .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_01.jpg);
@@ -224,16 +273,24 @@ header h1 {
   background-position: center;
 }
 
+.blog-description {
+  padding: 0 .7em;
+  font-size: .7rem;
+  text-align: justify;
+}
+
 .blog-btn {
-  padding: .7em 1.1em;
-  background-color: skyblue;
+  padding: .3em .7em;
+  background-color: #3182ce;
   color: #fff;
-  font-size: 1.1rem;
-  border-radius: 7px;
+  font-size: .7rem;
+  border-radius: 3px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 1em;
 }
 
 /* projects */
@@ -247,31 +304,53 @@ header h1 {
   overflow-y: auto;
 }
 #projects h2{
-  font-size: 2.7rem;
+  font-size: 1.7rem;
   color: #fff;
   text-align: center;
 }
 
 .project-wrapper {
   display: flex;
-  flex-flow: column;
+  flex-wrap: wrap;
   gap: 21px;
-  align-items: flex-start;
 }
 
 .project {
+  padding: 1em 1em 4em 1em;
   display: flex;
-  gap: 21px;
+  gap: 11px;
+  flex-flow: column;
   align-items: center;
-  font-size: 1.7rem;
+  font-size: .7rem;
+  width: calc(33.3334% - 14px);
+  border: 3px solid #fff;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  height: auto;
+  overflow-y: auto;
+  position: relative;
+}
+
+.project-text {
+  max-width: 270px;
+  text-align: justify;
+}
+
+.project-btns {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1em;
 }
 
 .siteName-btn, .codeLink-btn {
   padding: .3em .7em;
-  background-color: skyblue;
+  background-color: transparent;
   color: #fff;
-  font-size: 1.1rem;
-  border-radius: 7px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  font-size: .7rem;
   cursor: pointer;
   display: flex;
   align-items: center;

@@ -5,6 +5,7 @@
   line-height: 1.3;
   border-radius: 3px;
   letter-spacing: 1px;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -38,7 +39,7 @@ ul {
 
 body {
   font-family: monospace;
-  padding: 100px 0;
+  padding: 100px 0 0;
   border-radius: 0;
   
 }
@@ -181,6 +182,7 @@ header h1 {
   overflow: hidden ;
   margin: 30px auto 0;
   position: relative;
+  border-radius:77px;
 }
 
 .showcase .pic-wrap::after {
@@ -219,6 +221,7 @@ header h1 {
 
 .showcase .pic-wrap {
   margin: 0 auto;
+  border-radius: 0;
 }
 
 .showcase .pic-wrap::after {
@@ -447,9 +450,12 @@ header h1 {
 
 footer {
   width: 100%;
-  min-height: 290px;
   background-color: #fff;
   padding: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 footer .footer-body {

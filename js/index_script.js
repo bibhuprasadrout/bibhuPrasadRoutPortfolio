@@ -6,3 +6,5 @@ document.querySelector('.navstop').addEventListener('click', function showNavMen
     document.querySelector('.navstop-dropdown').style.width = '110px';
   }
 })
+
+// document.querySelectorAll('.navstop-link').forEach()

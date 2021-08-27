@@ -164,47 +164,39 @@ header h1 {
   background-color: #3182ce;
 }
 
-.showcase .pic-wrap::before {
-  content: '';
-  display: block;
+.showcase .duct-tape {
   position: absolute;
-  top: -140px;
-  left: -120px;
-  width: 550px;
-  height: 170px;
-  background-color: #3182ce;
-  transform: rotate(-30deg);
+}
+
+.showcase .dt-1 {
+  top: -30px;
+  left: -70px;
+  transform: rotate(-21deg);
 }
 
 .showcase .pic-wrap {
   max-width: 470px;
   height: 100%;
-  overflow: hidden ;
-  margin: 30px auto 0;
+  margin: 110px auto 70px;
   position: relative;
-  border-radius:77px;
 }
 
-.showcase .pic-wrap::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -30px;
-  right: -270px;
-  width: 550px;
-  height: 170px;
-  background-color: #3182ce;
-  transform: rotate(70deg);
+.showcase .dt-2 {
+  bottom: -70px;
+  right: -70px;
+  transform: rotate(-7deg);
 }
 
 .showcase .pic-wrap .pic {
   width: 100%;
   height: auto;
+  border-radius:11px;
 }
 
 .showcase .bio {
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
+  font-size: calc(11px + 1vw);
 }
 
 .showcase .bio p {
@@ -215,7 +207,7 @@ header h1 {
 
 @media(max-width: 470px) {
   
-.showcase .pic-wrap::before {
+.showcase .duct-tape {
   display: none;
 }
 
@@ -224,9 +216,6 @@ header h1 {
   border-radius: 0;
 }
 
-.showcase .pic-wrap::after {
-  display: none;
-}
 }
 
 
@@ -460,10 +449,12 @@ footer {
 
 footer .footer-body {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 footer .footer-body .name-footer {
-  text-align: center;
   padding: 10px;
 }
 
@@ -475,7 +466,7 @@ footer .footer-body .footer-right {
   padding: 10px;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
 }
@@ -508,12 +499,21 @@ footer .footer-body .footer-right .socialmedia a img {
   footer .footer-body {
     flex-flow: column;
   }
+
+  footer .footer-body .name-footer {
+    margin: 0 auto;
+  }
     
   footer .footer-body .footer-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
+  }
+  
+  footer .footer-body .footer-right {
+    align-items: center;
+    padding: 1px;
   }
 }
 

@@ -200,19 +200,22 @@ header h1 {
 }
 
 .showcase .bio p {
-  padding: 20px;
-  text-align: left;
+  padding: 0 20px 30px 20px;
+  text-align: justify;
   letter-spacing: 1.1px;
 }
 
-@media(max-width: 470px) {
+@media(max-width: 768px) {
   
 .showcase .duct-tape {
   display: none;
 }
 
 .showcase .pic-wrap {
-  margin: 0 auto;
+  margin: 30px auto;
+}
+
+.showcase .pic-wrap .pic {
   border-radius: 0;
 }
 
@@ -246,32 +249,32 @@ header h1 {
   height: auto;
   overflow-y: auto;
 }
-@media (max-width: 768px) {
-  .personality-field {
-    gap: 11px;
-    overflow-y: initial;
-  }
-}
+
 #miscellaneous {
   flex: 1;
 }
+
 #technologies {
   flex: 1.5;
 }
+
 #blogs {
   flex: 3;
 }
+
 .personality-field h2 {
-  font-size: 1.1rem;
+  font-size: calc(7px + 1vw);
   color: #3182ce;
 }
+
 .field-info {
-  font-size: .7rem;
+  font-size: calc(.7rem + .3vw);
   border-radius: 3px;
   background-color: skyblue;
   color: #fff;
   padding: .3em;
 }
+
 .miscellaneous-btn {
   padding: .3em .7em;
   background-color: #3182ce;
@@ -283,6 +286,7 @@ header h1 {
   align-items: center;
   justify-content: center;
 }
+
 .skills-table {
   font-size: 1.1rem;
   display: flex;
@@ -308,21 +312,27 @@ header h1 {
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   padding-bottom: 4em;
 }
+
 #bootReactAppBlog .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_01.jpg);
 }
+
 #jsReigniteLoveForCoding .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_02.jpg);
 }
+
 #bootReactAppBlog2 .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_03.jpg);
 }
+
 #bootReactAppBlog3 .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_04.jpg);
 }
+
 #bootReactAppBlog4 .blog-display-pic-wrap {
   background-image: url(../media/blog_pic_05.jpg);
 }
+
 .blog-display-pic-wrap {
   width: 100%;
   height: 11vh;
@@ -334,7 +344,7 @@ header h1 {
 
 .blog-description {
   padding: 0 .7em;
-  font-size: .7rem;
+  font-size: calc(.7rem + .3vw);
   text-align: justify;
 }
 
@@ -352,7 +362,40 @@ header h1 {
   bottom: 1em;
 }
 
+@media(max-width: 1024px) {
+  
+  .personality-field h2 {
+    font-size: calc(7px + .7vw);
+  }
+  
+  .skills-table {
+    font-size: calc(7px + .7vw);
+  }
+  
+  .blog-description {
+    font-size: calc(.7rem + .1vw);
+  }
+}
+
 @media(max-width: 768px) {
+
+  .personality-field {
+    gap: 11px;
+    overflow-y: initial;
+  }
+  
+  .personality-field h2 {
+    font-size: calc(7px + 3vw);
+  }
+  
+  .skills-table {
+    font-size: calc(7px + 2.7vw);
+  }
+  
+  .blog-description {
+    font-size: calc(.7rem + .3vw);
+  }
+
   .blog-articles {
     flex-flow: column;
   }
@@ -401,7 +444,8 @@ header h1 {
 }
 
 .project-text {
-  max-width: 270px;
+  max-width: 700px;
+  font-size: calc(.7rem + .3vw);
   text-align: justify;
 }
 
@@ -427,6 +471,14 @@ header h1 {
   justify-content: center;
 }
 
+@media(max-width: 1024px) {
+
+  .project-text {
+    font-size: calc(.7rem + .1vw);
+  }
+
+}
+
 @media(max-width: 768px) {
   .project-wrapper {
     flex-flow: column;
@@ -434,6 +486,10 @@ header h1 {
 
   .project {
     width: 100%;
+  }
+
+  .project-text {
+    font-size: calc(.7rem + .3vw);
   }
 }
 
@@ -456,10 +512,16 @@ footer .footer-body {
 
 footer .footer-body .name-footer {
   padding: 10px;
+  margin: auto;
 }
 
 footer .footer-body .footer-menu {
   padding: 10px;
+  margin: 0 auto;
+}
+
+footer .footer-body .footer-menu li {
+  padding: 3px;
 }
 
 footer .footer-body .footer-right {
@@ -469,6 +531,7 @@ footer .footer-body .footer-right {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
+  margin: auto;
 }
 
 footer .footer-body .footer-right span h3 {
@@ -496,8 +559,11 @@ footer .footer-body .footer-right .socialmedia a img {
 }
 
 @media(max-width: 768px) {
+
   footer .footer-body {
     flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   footer .footer-body .name-footer {

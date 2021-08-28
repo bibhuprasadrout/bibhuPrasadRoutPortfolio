@@ -7,4 +7,11 @@ document.querySelector('.navstop').addEventListener('click', function showNavMen
   }
 })
 
-// document.querySelectorAll('.navstop-link').forEach()
+const menuOptions = document.querySelector('.navstop-dropdown').querySelectorAll('.navstop-link')
+
+for(i = 0; i < menuOptions.length; i++) {
+  menuOptions[i].addEventListener('click',function() {
+    document.querySelector('.current').classList.remove('current')
+    this.classList.add('current')
+  })
+}

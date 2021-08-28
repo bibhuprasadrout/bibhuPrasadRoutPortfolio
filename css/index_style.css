@@ -503,28 +503,33 @@ footer {
   right: 0;
 }
 
-footer .footer-body {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+footer .footer-body-wrap {
   gap: 30px;
 }
 
-footer .footer-body .name-footer {
+footer .footer-body-wrap .footer-body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+footer .footer-body-wrap .footer-body .name-footer {
   padding: 10px;
   margin: auto;
 }
 
-footer .footer-body .footer-menu {
+footer .footer-body-wrap .footer-body .footer-menu {
   padding: 10px;
   margin: 0 auto;
 }
 
-footer .footer-body .footer-menu li {
+footer .footer-body-wrap .footer-body .footer-menu li {
   padding: 3px;
 }
 
-footer .footer-body .footer-right {
+footer .footer-body-wrap .footer-body .footer-right {
   padding: 10px;
   display: flex;
   flex-flow: column;
@@ -534,50 +539,50 @@ footer .footer-body .footer-right {
   margin: auto;
 }
 
-footer .footer-body .footer-right span h3 {
+footer .footer-body-wrap .footer-body .footer-right span h3 {
   display: inline-flex;
 }
 
-footer .footer-body .footer-right .contact {
+footer .footer-body-wrap .footer-body .footer-right .contact {
   white-space: nowrap;
 }
 
-footer .footer-body .footer-right .socialmedia {
+footer .footer-body-wrap .footer-body .footer-right .socialmedia {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-footer .footer-body .footer-right .socialmedia a {
+footer .footer-body-wrap .footer-body .footer-right .socialmedia a {
   margin-bottom: -5px;
 }
 
-footer .footer-body .footer-right .socialmedia a img {
+footer .footer-body-wrap .footer-body .footer-right .socialmedia a img {
   opacity: .7;
   width: 17px;
 }
 
 @media(max-width: 768px) {
 
-  footer .footer-body {
+  footer .footer-body-wrap .footer-body {
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
   }
 
-  footer .footer-body .name-footer {
+  footer .footer-body-wrap .footer-body .name-footer {
     margin: 0 auto;
   }
     
-  footer .footer-body .footer-menu {
+  footer .footer-body-wrap .footer-body .footer-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
   }
   
-  footer .footer-body .footer-right {
+  footer .footer-body-wrap .footer-body .footer-right {
     align-items: center;
     padding: 1px;
   }
